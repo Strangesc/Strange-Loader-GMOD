@@ -51,15 +51,9 @@ module/subfolder/file2.lua
 Loader поддерживает несколько языков и автоматически определяет язык игры через консольную переменную `gmod_language`.
 
 ### Поддерживаемые языки:
-- **English (en):**
-  - "All LUA files loaded successfully."
-  - "Loaded files:"
-- **Русский (ru):**
-  - "Все файлы LUA успешно загружены."
-  - "Загруженные файлы:"
-- **Français (fr):**
-  - "Tous les fichiers LUA ont été chargés avec succès."
-  - "Fichiers chargés :"
+- **English (en)**
+- **Русский (ru)**
+- **Français (fr)**
 
 Если язык игры не поддерживается, используется английский по умолчанию.
 

@@ -1,68 +1,56 @@
 # Strange Loader [CORE Loader] 
 
-## Description
-Echo Loader is a lightweight and flexible LUA file loader for Garry's Mod. It automatically loads files from a specified folder and supports multiple interface languages: English, Russian, and French.
+## Описание
+Strange Loader - это лёгкий загрузчик LUA-файлов для Garry's Mod. Он автоматически загружает файлы из указанной папки и поддерживает несколько языков интерфейса: английский, русский и французский.
 
-This script simplifies the organization and loading of modules in your projects, minimizing manual effort.
-
----
-
-## Features
-- **Automatic File Loading:** Recursively finds and loads LUA files from the specified folder.
-- **Server and Client Compatibility:** Handles files appropriately for server and client environments (AddCSLuaFile and include).
-- **Localization:** Console messages are displayed in the language matching the game's settings (supported: English, Russian, French).
-- **Informative Output:** Lists all loaded files in the console.
+Этот скрипт упрощает загрузку модулей в ваших проектах, минимизируя ручной труд.
 
 ---
 
-## Installation
+## Функциональность
+- Рекурсивно находит и загружает LUA-файлы из указанной папки.
+- Корректно обрабатывает файлы для сервера и клиента (AddCSLuaFile и include).
+- Сообщения в консоли отображаются на языке, соответствующем настройкам игры (поддерживаются: английский, русский, французский).
+- Показывает список всех загруженных файлов в консоли.
 
-1. Download or clone this repository:
+---
+
+## Установка
+
+1. Скачайте данный репозиторий или клонируйте его:
    ```bash
-   git clone https://github.com/Strangesc/EchoLoader.git
+   [git clone https://github.com/Strangesc/EchoLoader.git](https://github.com/Strangesc/Strange-Loader-GMOD.git)
    ```
 
-2. Place the script in your addon directory or your module folder.
+2. Поместите скрипт в ваш аддон или в папку с вашим модулем.
 
-3. Ensure the files are organized as follows:
-   ```
-   addons/
-   ├── myaddon/
-       ├── lua/
-           ├── module/
-               ├── file1.lua
-               └── subfolder/
-                   └── file2.lua
-       └── echo_loader.lua
-   ```
-
-4. Include `echo_loader.lua` in your project to automatically load files from the `module/` folder:
+3.. Подключите `echo_loader.lua` в ваш проект, чтобы автоматически загружать файлы из папки `module/`:
    ```lua
    include("echo_loader.lua")
    ```
 
 ---
 
-## Usage
+## Использование
 
-1. Place all your modules and scripts in the `lua/module/` folder of your addon.
-2. Start your Garry's Mod server or client.
-3. Echo Loader will automatically load all files from the specified folder and output the list of loaded files to the console.
+1. Поместите все ваши модули и скрипты в папку `lua/module/` вашего аддона.
+2. Запустите Garry's Mod.
+3. Loader автоматически загрузит все файлы из указанной папки и выведет список загруженных файлов в консоль.
 
-Example console output:
+Пример вывода в консоли:
+
 ```
-[Echo Loader] All LUA files loaded successfully.
-[Echo Loader] Loaded files:
+[Echo Loader] Все файлы LUA успешно загружены.
+[Echo Loader] Загруженные файлы:
 module/file1.lua
 module/subfolder/file2.lua
 ```
 
 ---
 
-## Localization
-Echo Loader supports multiple languages and automatically detects the game's language using the `gmod_language` console variable.
+Loader поддерживает несколько языков и автоматически определяет язык игры через консольную переменную `gmod_language`.
 
-### Supported Languages:
+### Поддерживаемые языки:
 - **English (en):**
   - "All LUA files loaded successfully."
   - "Loaded files:"
@@ -73,27 +61,14 @@ Echo Loader supports multiple languages and automatically detects the game's lan
   - "Tous les fichiers LUA ont été chargés avec succès."
   - "Fichiers chargés :"
 
-If the game's language is not supported, English is used by default.
+Если язык игры не поддерживается, используется английский по умолчанию.
 
 ---
 
-## Adding a New Language
-1. Open the `echo_loader.lua` script.
-2. Locate the `translations` table.
-3. Add a new language in the following format:
-   ```lua
-   translations["language_code"] = {
-       all_files_loaded = "Your translation for \"All LUA files loaded successfully.\"",
-       loaded_files = "Your translation for \"Loaded files:\""
-   }
-   ```
-4. Save the changes. The new language will be automatically used if it matches the game's settings.
 
----
 
-## Support and Feedback
-If you have questions, issues, or suggestions, create an [Issue](https://github.com/Strangesc/EchoLoader/issues) in the repository or submit a Pull Request.
 
-**Thank you for using Echo Loader!**
+
+
 
 
